@@ -10,7 +10,7 @@ int main()
 
     for (int i = 0; i < size; i++)
     {
-        printf("Enter value for element %d: ", i + 1);
+        printf("Enter value at index %d: ", i);
         scanf("%d", &arr[i]);
     }
 
@@ -29,13 +29,23 @@ int main()
         next++;
     }
 
-    for (int i = 0; i < size - 1; i++)
-    {
-        newArr[i] = arr[i];
-    }
+    // IF A NEW FRESH ARRAY IS REQUIRED WITH THE REQUIRED ELEMENT DELETED
 
-    for (int i = 0; i < size - 1; i++)
+    // for (int i = 0; i < size - 1; i++)
+    // {
+    //     newArr[i] = arr[i];
+    // }
+
+    // for (int i = 0; i < size - 1; i++)
+    // {
+    //     printf("%d\t", newArr[i]);
+    // }
+
+    // IF SAME ARRAY IS REQUIRED TO BE PRINTED WITH THE REQUIRED ELEMENT DELETED
+
+    size--;
+    for (int i = 0; i < size; i++)
     {
-        printf("%d\t", newArr[i]);
+        printf("%d\t", arr[i]);
     }
 }
